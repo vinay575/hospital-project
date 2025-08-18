@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Hospital - Caring for Your Little Ones</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-heart text-pink me-2"></i>
+                <span class="brand-text">Children's Hospital</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      
+                        <a class="nav-link" href="doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-it">
+                        <a class="nav-link" href="appointment.html">Appointment</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <div class="slide-content">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Children's Hospital" class="carousel-image">
+                    <div class="slide-overlay">
+                        <div class="container">
+                            <div class="hero-content">
+                                <h1 class="hero-title animate-fade-in">Welcome to Children's Hospital</h1>
+                                <p class="hero-subtitle animate-slide-up">Where Little Hearts Find Big Care 💖</p>
+                               <a href="appointment.html" class="btn btn-primary btn-3d">
+    <i class="fas fa-calendar-plus me-2"></i>Book Appointment
+</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-content">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Happy Children" class="carousel-image">
+                    <div class="slide-overlay">
+                        <div class="container">
+                            <div class="hero-content">
+                                <h1 class="hero-title animate-fade-in">Expert Pediatric Care</h1>
+                                <p class="hero-subtitle animate-slide-up">Making Healthcare Fun and Comfortable for Kids 🌈</p>
+                                <button class="btn btn-secondary btn-3d animate-bounce" onclick="scrollToSection('services')">
+                                    <i class="fas fa-stethoscope me-2"></i>Our Services
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-ti">ℹ️ About Children's Hospital</h2>
+                <p class="section-sub">Dedicated to providing exceptional healthcare for children</p>
+            </div>
+            
+            <!-- Modal-style About Section -->
+            <div class="about-modal-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-image-container">
+                            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="About Us" class="about-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <h3 class="about-tit">Our Story</h3>
+                            <p class="about-text">
+                                Children's Hospital has been a beacon of hope and healing for families for over 25 years. 
+                                We believe that every child deserves the best possible care in a warm, welcoming environment 
+                                that feels more like home than a hospital.
+                            </p>
+                            <p class="about-text">
+                                Our team of dedicated pediatric specialists combines cutting-edge medical technology with 
+                                compassionate care to ensure your child receives the treatment they need while feeling 
+                                safe and comfortable.
+                            </p>
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">25+</span>
+                                    <span class="stat-label">Years of Excellence</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Expert Doctors</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">100K+</span>
+                                    <span class="stat-label">Happy Families</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission & Vision Cards -->
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="mission-vision-card mission-card">
+                        <div class="card-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="card-title">🌟 Our Mission</h4>
+                        <p class="card-text">
+                            To provide exceptional pediatric healthcare services with compassion, innovation, and excellence, 
+                            ensuring every child receives personalized care in a nurturing environment that promotes healing and growth.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="mission-vision-card vision-card">
+                        <div class="card-icon">
+                            <i class="fas fa-rainbow"></i>
+                        </div>
+                        <h4 class="card-title">🌈 Our Vision</h4>
+                        <p class="card-text">
+                            To be the leading children's hospital, recognized for transforming pediatric healthcare through 
+                            innovative treatments, research excellence, and creating joyful healing experiences for children and families.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-tit">🛎️ Our Services</h2>
+                <p class="section-subtitle">Comprehensive healthcare services designed specifically for children</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h5 class="service-title">🧑‍⚕️ Pediatric Care</h5>
+                        <p class="service-description">Comprehensive medical care for infants, children, and adolescents</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-syringe"></i>
+                        </div>
+                        <h5 class="service-title">💉 Vaccinations</h5>
+                        <p class="service-description">Complete immunization programs to protect your child's health</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <h5 class="service-title">🦷 Dental Care</h5>
+                        <p class="service-description">Specialized dental services for children in a fun environment</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h5 class="service-title">🫀 Cardiology</h5>
+                        <p class="service-description">Expert heart care for children with cardiac conditions</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h5 class="service-title">👓 Eye Check-up</h5>
+                        <p class="service-description">Comprehensive eye examinations and vision care</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-ambulance"></i>
+                        </div>
+                        <h5 class="service-title">🩺 Emergency Care</h5>
+                        <p class="service-description">24/7 emergency services for urgent pediatric needs</p>
+                    </div>
+                </div>
+            </div>
+
+          
+            
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-ti">🏥 Our Departments</h2>
+                <p class="section-sub">Specialized departments for comprehensive child healthcare</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="department-card" onclick="openDepartmentModal('pediatrics')">
+                        <div class="department-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h5 class="department-title">👶 Pediatrics</h5>
+                        <p class="department-description">General pediatric care for all ages</p>
+                        <div class="department-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="department-card" onclick="openDepartmentModal('dentistry')">
+                        <div class="department-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <h5 class="department-title">🦷 Dentistry</h5>
+                        <p class="department-description">Specialized dental care for children</p>
+                        <div class="department-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="department-card" onclick="openDepartmentModal('cardiology')">
+                        <div class="department-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h5 class="department-title">🫀 Cardiology</h5>
+                        <p class="department-description">Heart and cardiovascular care</p>
+                        <div class="department-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="department-card" onclick="openDepartmentModal('ophthalmology')">
+                        <div class="department-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h5 class="department-title">👀 Ophthalmology</h5>
+                        <p class="department-description">Eye care and vision services</p>
+                        <div class="department-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="department-card" onclick="openDepartmentModal('neurology')">
+                        <div class="department-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5 class="department-title">🧠 Neurology</h5>
+                        <p class="department-description">Neurological and brain care</p>
+                        <div class="department-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="department-card" onclick="openDepartmentModal('orthopedics')">
+                        <div class="department-icon">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <h5 class="department-title">🦴 Orthopedics</h5>
+                        <p class="department-description">Bone and joint care</p>
+                        <div class="department-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Doctors Section -->
+<section id="doctors" class="section-padding">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="section-tit">👨‍⚕️ Meet Our Doctors</h2>
+            <p class="section-subtitle">Expert pediatric specialists dedicated to your child's health</p>
+        </div>
+        
+        <div class="row">
+            <!-- Display only 3 doctors -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <a class="doctor-card" href="doctors.html">
+                    <div class="doctor-image">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Sarah Smith">
+                    </div>
+                    <div class="doctor-info">
+                        <h5 class="doctor-name">Dr. Sarah Smith</h5>
+                        <p class="doctor-specialty">Chief Pediatrician</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <a class="doctor-card" href="doctors.html">
+                    <div class="doctor-image">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Michael Johnson">
+                    </div>
+                    <div class="doctor-info">
+                        <h5 class="doctor-name">Dr. Michael Johnson</h5>
+                        <p class="doctor-specialty">Pediatric Cardiologist</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <a class="doctor-card" href="doctors.html">
+                    <div class="doctor-image">
+                        <img src="https://images.unsplash.com/photo-1594824475317-d0d4e0b0e0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Emily Davis">
+                    </div>
+                    <div class="doctor-info">
+                        <h5 class="doctor-name">Dr. Emily Davis</h5>
+                        <p class="doctor-specialty">Pediatric Neurologist</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Centered View More button -->
+        <div class="text-center mt-4">
+            <a href="doctors.html" class="btn btn-primary btn-lg">View More Doctors</a>
+        </div>
+    </div>
+</section>
+
+   
+
+    <section id="faq " class="section-padding" style="background-color: rgba(179, 187, 245, 0.415);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-ti mb-3" style="color:#000000;">❓ Frequently Asked Questions</h2>
+            <p class="section-sub" style="color:#555;">
+                Answers to the most common questions parents have about our children's hospital.
+            </p>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                <h2 class="accordion-header" id="faqHeading1">
+                    <button class="accordion-button collapsed bg-light  rounded  fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                        🍼 What age group do you treat at your hospital?
+                    </button>
+                </h2>
+                <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-white">
+                        We provide medical care for children from newborns up to 18 years of age.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                <h2 class="accordion-header" id="faqHeading2">
+                    <button class="accordion-button collapsed bg-light rounded  fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                        📅 How can I book an appointment?
+                    </button>
+                </h2>
+                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-white">
+                        Appointments can be booked online through our "Book Appointment" page or by calling our reception.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                <h2 class="accordion-header" id="faqHeading3">
+                    <button class="accordion-button collapsed bg-light rounded  fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                        🏥 What should I bring for my child's visit?
+                    </button>
+                </h2>
+                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-white">
+                        Please bring your child's medical records, vaccination details, and a list of any medications they are taking.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                <h2 class="accordion-header" id="faqHeading4">
+                    <button class="accordion-button collapsed bg-light rounded  fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                        🚨 Do you offer emergency services for children?
+                    </button>
+                </h2>
+                <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-white">
+                        Yes, we have a 24/7 pediatric emergency department staffed by specialists trained in child care.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                <h2 class="accordion-header" id="faqHeading5">
+                    <button class="accordion-button collapsed bg-light rounded  fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                        💉 Are vaccinations available at your hospital?
+                    </button>
+                </h2>
+                <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-white">
+                        Yes, we provide a full range of pediatric vaccinations according to the recommended schedule.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                <h2 class="accordion-header" id="faqHeading6">
+                    <button class="accordion-button collapsed bg-light rounded  fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                        📞 How can I contact my child’s doctor for follow-up questions?
+                    </button>
+                </h2>
+                <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-white">
+                        You can contact your child's doctor through our hospital's contact page, by phone.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<script>
+    const newsletterForm = document.getElementById('newsletterForm');
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = this.querySelector('input[type="email"]').value;
+        if(email) {
+            alert(`Thank you for subscribing with ${email}!`);
+            this.reset();
+        }
+    });
+</script>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-evenly">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-heart text-pink me-2"></i>
+                        <span class="brand-text">Children's Hospital</span>
+                    </div>
+                    <p class="footer-description">
+                        Providing exceptional pediatric healthcare with love, care, and expertise. 
+                        Your child's health and happiness are our top priorities.
+                    </p>
+                </div>
+                <!-- <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#departments">Departments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#services">Pediatric Care</a></li>
+                        <li><a href="#services">Vaccinations</a></li>
+                        <li><a href="#services">Dental Care</a></li>
+                        <li><a href="#services">Emergency Care</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-lg-4 mb-4">
+                    <h6 class="footer-title">Contact Info</h6>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>123 Rainbow Street, Healthcare City</p>
+                        <p><i class="fas fa-phone me-2"></i>+1 (555) 123-KIDS</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@rainbowchildrens.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="footer-title">Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright">
+                        &copy; 2025 Hospital name . All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Department Modal -->
+    <div class="modal fade" id="departmentModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="departmentModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="departmentModalBody">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doctor Modal -->
+    <div class="modal fade" id="doctorModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="doctorModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="doctorModalBody">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success/Error Modal -->
+    <div class="modal fade" id="messageModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="messageModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="messageModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

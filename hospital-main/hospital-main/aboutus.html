@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Hospital - Caring for Your Little Ones</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+     <style>
+        .about-header-image {
+            background-image: url('https://kcmhospital.com/image/about-us1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            margin-top: 56px; /* To account for fixed navbar */
+        }
+        .header-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 768px) {
+            .about-header-image {
+                height: 200px;
+            }
+            .header-overlay h1 {
+                font-size: 1.8rem;
+            }
+            .header-overlay p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-heart text-pink me-2"></i>
+                <span class="brand-text">Children's Hospital</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-it">
+                        <a class="nav-link" href="appointment.html">Appointment</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- About Us Section -->
+
+
+     <section class="about-header-image mt-5">
+        <div class="header-overlay text-center d-flex align-items-center justify-content-center">
+            <div>
+                <h1 class="text-white display-4">ℹ️ About Us</h1>
+                <p class="text-white lead">Dedicated to providing exceptional healthcare for children</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding ">
+        <div class="container">
+          
+         <!-- Modal-style About Section -->
+            <div class="about-modal-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-image-container">
+                            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="About Us" class="about-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <h3 class="about-tit">Our Story</h3>
+                            <p class="about-text">
+                                This Children's Hospital has been a beacon of hope and healing for families for over 25 years. 
+                                We believe that every child deserves the best possible care in a warm, welcoming environment 
+                                that feels more like home than a hospital.
+                            </p>
+                            <p class="about-text">
+                                Our team of dedicated pediatric specialists combines cutting-edge medical technology with 
+                                compassionate care to ensure your child receives the treatment they need while feeling 
+                                safe and comfortable.
+                            </p>
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">25+</span>
+                                    <span class="stat-label">Years of Excellence</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Expert Doctors</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">100K+</span>
+                                    <span class="stat-label">Happy Families</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission & Vision Cards -->
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="mission-vision-card mission-card">
+                        <div class="card-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="card-title">🌟 Our Mission</h4>
+                        <p class="card-text">
+                            To provide exceptional pediatric healthcare services with compassion, innovation, and excellence, 
+                            ensuring every child receives personalized care in a nurturing environment that promotes healing and growth.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="mission-vision-card vision-card">
+                        <div class="card-icon">
+                            <i class="fas fa-rainbow"></i>
+                        </div>
+                        <h4 class="card-title">🌈 Our Vision</h4>
+                        <p class="card-text">
+                            To be the leading children's hospital, recognized for transforming pediatric healthcare through 
+                            innovative treatments, research excellence, and creating joyful healing experiences for children and families.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-light">
+        <div class="container">
+
+            
+
+            <!-- Why Choose Us Section -->
+            <div class="why-choose-us mt-4">
+                <div class="section-header text-center mb-4">
+                    <h3 class="section-tit">❓❤️ Why Choose Us</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="why-content">
+                                <h5>Award-Winning Care</h5>
+                                <p>Recognized for excellence in pediatric healthcare</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="why-content">
+                                <h5>24/7 Availability</h5>
+                                <p>Round-the-clock emergency and urgent care services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="why-content">
+                                <h5>Expert Team</h5>
+                                <p>Board-certified pediatric specialists and caring staff</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="why-content">
+                                <h5>Child-Friendly Environment</h5>
+                                <p>Designed to make children feel comfortable and safe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-evenly">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-heart text-pink me-2"></i>
+                        <span class="brand-text">Children's Hospital</span>
+                    </div>
+                    <p class="footer-description">
+                        Providing exceptional pediatric healthcare with love, care, and expertise. 
+                        Your child's health and happiness are our top priorities.
+                    </p>
+                </div>
+                <!-- <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#departments">Departments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#services">Pediatric Care</a></li>
+                        <li><a href="#services">Vaccinations</a></li>
+                        <li><a href="#services">Dental Care</a></li>
+                        <li><a href="#services">Emergency Care</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-lg-4 mb-4">
+                    <h6 class="footer-title">Contact Info</h6>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>123 Rainbow Street, Healthcare City</p>
+                        <p><i class="fas fa-phone me-2"></i>+1 (555) 123-KIDS</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@rainbowchildrens.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="footer-title">Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright">
+                        &copy; 2025 Hospital name . All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Department Modal -->
+    <div class="modal fade" id="departmentModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="departmentModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="departmentModalBody">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doctor Modal -->
+    <div class="modal fade" id="doctorModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="doctorModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="doctorModalBody">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success/Error Modal -->
+    <div class="modal fade" id="messageModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="messageModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="messageModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

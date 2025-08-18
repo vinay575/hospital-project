@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Hospital - Our Doctors</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color:  rgb(4 11 56);;
+        }
+        /* Doctor cards */
+       .doctor-card {
+    display: block; /* important for <a> */
+    background-color: rgb(4 11 56);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+    cursor: pointer;
+    overflow: hidden;
+    height: 100%;
+    border: 1px solid #00b894;
+    box-shadow: 0 0 0 0.2rem rgba(26, 188, 156, 0.25);
+    text-decoration: none; /* remove underline */
+    color: inherit; /* keep text color */
+}
+        .doctor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        .doctor-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .doctor-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .doctor-info h5 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .doctor-info p {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        /* Horizontal detail card */
+        .doctor-detail-card .card {
+            border-radius: 15px;
+             background-color: rgba(255, 255, 255, 0.751);
+             border: 1px solid #00b894;
+             box-shadow: var(--shadow-heavy);
+        }
+        .doctor-detail-card img {
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+     <style>
+        .about-header-image {
+            background-image: url('https://t3.ftcdn.net/jpg/06/45/68/94/360_F_645689490_Fzwptjq0YLCW8JZpC6lASo1KJcAgzZPj.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            margin-top: 56px; /* To account for fixed navbar */
+        }
+        .header-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 768px) {
+            .about-header-image {
+                height: 200px;
+            }
+            .header-overlay h1 {
+                font-size: 1.8rem;
+            }
+            .header-overlay p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-heart text-pink me-2"></i>
+                <span class="brand-text">Children's Hospital</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-it">
+                        <a class="nav-link" href="appointment.html">Appointment</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+     <section class="about-header-image mt-5">
+        <div class="header-overlay text-center d-flex align-items-center justify-content-center">
+            <div>
+                <h1 class="text-white display-4">👨‍⚕️ Meet Our Doctors</h1>
+                <p class="text-white lead">Expert pediatric specialists dedicated to your child's health</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="section-padding pt-5">
+        <div class="container">
+            
+            
+            <div class="row" id="doctor-cards">
+                <!-- Doctor cards will be generated here -->
+            </div>
+
+            <!-- Horizontal detail card -->
+            <div class="doctor-detail-card mt-5 d-none" id="doctor-detail">
+                <div class="card shadow p-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-3">
+                            <img id="detail-img" src="" alt="Doctor" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h4 id="detail-name" class="card-title"></h4>
+                                <p id="detail-specialty" class="text-primary fw-bold"></p>
+                                <p><strong>Department:</strong> <span id="detail-department"></span></p>
+                                <p><strong>Experience:</strong> <span id="detail-experience"></span></p>
+                                <p><strong>Qualifications:</strong> <span id="detail-qualifications"></span></p>
+                                <p><strong>Education:</strong> <span id="detail-education"></span></p>
+                                <p><strong>Bio:</strong> <span id="detail-bio"></span></p>
+                                <p><strong>Specialties:</strong> <span id="detail-specialties"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row justify-content-evenly">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-heart text-pink me-2"></i>
+                        <span class="brand-text">Children's Hospital</span>
+                    </div>
+                    <p class="footer-description">
+                        Providing exceptional pediatric healthcare with love, care, and expertise. 
+                        Your child's health and happiness are our top priorities.
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="footer-title">Contact Info</h6>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>123 Rainbow Street, Healthcare City</p>
+                        <p><i class="fas fa-phone me-2"></i>+1 (555) 123-KIDS</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@rainbowchildrens.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="footer-title">Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright">
+                        &copy; 2025 Children's Hospital. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script for doctor cards -->
+    <script>
+       const doctorData = {
+    'dr-smith': {
+        name: 'Dr. Sarah Smith',
+        specialty: 'Chief Pediatrician',
+        image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+        experience: '15 years',
+        department: 'Pediatrics',
+        qualifications: 'MD, Board Certified Pediatrician, Fellowship in Pediatric Emergency Medicine',
+        bio: 'Dr. Sarah Smith is our Chief Pediatrician with over 15 years of experience in pediatric care. She specializes in emergency pediatric medicine and has a passion for making healthcare comfortable and accessible for children and their families.',
+        education: 'Harvard Medical School, Boston Children\'s Hospital Residency',
+        specialties: ['General Pediatrics', 'Emergency Medicine', 'Adolescent Health', 'Preventive Care']
+    },
+    'dr-johnson': {
+        name: 'Dr. Michael Johnson',
+        specialty: 'Pediatric Cardiologist',
+        image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+        experience: '12 years',
+        department: 'Cardiology',
+        qualifications: 'MD, Board Certified Pediatric Cardiologist, Fellowship in Congenital Heart Disease',
+        bio: 'Dr. Michael Johnson is a renowned pediatric cardiologist specializing in congenital heart defects and pediatric cardiac surgery. He has performed over 500 successful cardiac procedures in children.',
+        education: 'Johns Hopkins Medical School, Children\'s Hospital of Philadelphia Fellowship',
+        specialties: ['Congenital Heart Defects', 'Cardiac Surgery', 'Interventional Cardiology', 'Heart Failure Management']
+    },
+    'dr-davis': {
+        name: 'Dr. Emily Davis',
+        specialty: 'Pediatric Neurologist',
+        image: 'https://images.unsplash.com/photo-1594824475317-d0d4e0b0e0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+        experience: '10 years',
+        department: 'Neurology',
+        qualifications: 'MD, PhD, Board Certified Pediatric Neurologist, Fellowship in Pediatric Epilepsy',
+        bio: 'Dr. Emily Davis is a pediatric neurologist with expertise in epilepsy and seizure disorders. She is actively involved in research and has published numerous papers on pediatric neurological conditions.',
+        education: 'Stanford Medical School, UCSF Neurology Residency',
+        specialties: ['Epilepsy', 'Seizure Disorders', 'Developmental Neurology', 'Headache Management']
+    },
+    'dr-wilson': {
+        name: 'Dr. James Wilson',
+        specialty: 'Pediatric Dentist',
+        image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+        experience: '8 years',
+        department: 'Dentistry',
+        qualifications: 'DDS, Pediatric Dentistry Residency, Sedation Certification',
+        bio: 'Dr. James Wilson is a pediatric dentist who specializes in creating positive dental experiences for children. He uses the latest techniques in pediatric sedation and behavior management.',
+        education: 'UCLA School of Dentistry, Children\'s Hospital Los Angeles Residency',
+        specialties: ['Preventive Dentistry', 'Pediatric Sedation', 'Special Needs Dentistry', 'Orthodontic Evaluation']
+    },
+    'dr-brown': {
+        name: 'Dr. Lisa Brown',
+        specialty: 'Pediatric Ophthalmologist',
+        image: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+        experience: '11 years',
+        department: 'Ophthalmology',
+        qualifications: 'MD, Board Certified Ophthalmologist, Fellowship in Pediatric Ophthalmology',
+        bio: 'Dr. Lisa Brown is a pediatric ophthalmologist specializing in strabismus and amblyopia treatment. She has extensive experience in pediatric eye surgery and vision therapy.',
+        education: 'Mayo Medical School, Cincinnati Children\'s Hospital Fellowship',
+        specialties: ['Strabismus Surgery', 'Amblyopia Treatment', 'Pediatric Cataracts', 'Vision Therapy']
+    },
+    'dr-taylor': {
+        name: 'Dr. Robert Taylor',
+        specialty: 'Pediatric Orthopedist',
+        image: 'https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+        experience: '14 years',
+        department: 'Orthopedics',
+        qualifications: 'MD, Board Certified Orthopedic Surgeon, Fellowship in Pediatric Spine Surgery',
+        bio: 'Dr. Robert Taylor is a pediatric orthopedic surgeon with expertise in spine deformities and sports injuries. He has pioneered several minimally invasive techniques for pediatric orthopedic conditions.',
+        education: 'Duke Medical School, Hospital for Special Surgery Fellowship',
+        specialties: ['Scoliosis Surgery', 'Sports Medicine', 'Trauma Surgery', 'Limb Reconstruction']
+    }
+};
+
+
+        // Generate doctor cards
+        const cardsContainer = document.getElementById('doctor-cards');
+
+        for (const id in doctorData) {
+            const doctor = doctorData[id];
+            const card = document.createElement('div');
+            card.className = 'col-lg-4 col-md-6 mb-4';
+            card.innerHTML = `
+                <a class="doctor-card" data-id="${id}">
+                    <div class="doctor-image">
+                        <img src="${doctor.image}" alt="${doctor.name}">
+                    </div>
+                    <div class="doctor-info">
+                        <h5 class="doctor-name">${doctor.name}</h5>
+                        <p class="doctor-specialty">${doctor.specialty}</p>
+                    </div>
+                </a>
+            `;
+            cardsContainer.appendChild(card);
+        }
+
+        // Show detailed card on click
+        cardsContainer.addEventListener('click', (e) => {
+            const card = e.target.closest('.doctor-card');
+            if (!card) return;
+
+            const id = card.dataset.id;
+            const doctor = doctorData[id];
+
+            if (doctor) {
+                document.getElementById('doctor-detail').classList.remove('d-none');
+                document.getElementById('detail-img').src = doctor.image;
+                document.getElementById('detail-name').textContent = doctor.name;
+                document.getElementById('detail-specialty').textContent = doctor.specialty;
+                document.getElementById('detail-department').textContent = doctor.department;
+                document.getElementById('detail-experience').textContent = doctor.experience;
+                document.getElementById('detail-qualifications').textContent = doctor.qualifications;
+                document.getElementById('detail-education').textContent = doctor.education;
+                document.getElementById('detail-bio').textContent = doctor.bio;
+                document.getElementById('detail-specialties').textContent = doctor.specialties.join(', ');
+                // Scroll to the detailed card
+                document.getElementById('doctor-detail').scrollIntoView({behavior: 'smooth'});
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Hospital - Caring for Your Little Ones</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+
+<style>
+#blog{
+    background-color: rgba(179, 187, 245, 0.415);
+    border: #00b894 solid 1px;
+}
+ body {
+        font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+    .blog-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    .blog-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .blog-header h1 {
+      font-size: 2.5rem;
+      color: #004080;
+    }
+    .blog-header p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .blog-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .blog-section img {
+      width: 45%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .blog-section .content {
+      flex: 1;
+      padding: 20px;
+    }
+    .blog-section h2 {
+      color: #0066cc;
+      margin-bottom: 10px;
+    }
+    .blog-section p {
+      text-align: justify;
+    }
+    .blog-footer {
+      margin-top: 40px;
+      font-style: italic;
+      text-align: center;
+      color: #444;
+    }
+</style>
+<style>
+        .about-header-image {
+            background-image: url('https://cdn.prod.website-files.com/64ef35c66e6766a880f6171c/666149f537851cea43c3b5e7_664b1cc42e5279a4846acf74_660cfd5b64cd19be5c0c4728_Blog-Page-Banner-3.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            margin-top: 56px; /* To account for fixed navbar */
+        }
+        .header-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 768px) {
+            .about-header-image {
+                height: 200px;
+            }
+            .header-overlay h1 {
+                font-size: 1.8rem;
+            }
+            .header-overlay p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-heart text-pink me-2"></i>
+                <span class="brand-text">Children's Hospital</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-it">
+                        <a class="nav-link" href="appointment.html">Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- blog Section -->
+    
+
+
+   <section class="about-header-image ">
+        <div class="header-overlay text-center d-flex align-items-center justify-content-center">
+            <div>
+                <h1 class="text-white display-4">📰 Blog</h1>
+                <p class="text-white lead">Practical advice to keep your little ones healthy every day.</p>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Blog Section -->
+<section id="blog" class="section-padding">
+ <div class="blog-container">
+    <div class="blog-header">
+      <h1>How Weather Changes Affect Children’s Health</h1>
+      <p>Insights from our Pediatric Experts at  Children’s Hospital</p>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="blog-section">
+      <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb" alt="Child healthcare">
+      <div class="content">
+        <h2>🌦️ Weather Shifts and Child Immunity</h2>
+        <p>
+          Weather transitions, especially between hot summers and rainy or winter seasons, often challenge a child’s developing immune system. 
+          Children are more prone to colds, coughs, allergies, and viral infections during these months because their bodies take time to adjust 
+          to sudden changes in temperature and humidity. Unlike adults, kids’ immune systems are still maturing, making them more vulnerable 
+          to seasonal illnesses. Pediatricians at our hospital observe that cases of asthma flare-ups, sore throats, and fevers rise 
+          significantly during weather transitions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="blog-section">
+      <div class="content">
+        <h2>🥗 Nutrition to Boost Defenses</h2>
+        <p>
+          A well-balanced diet plays a crucial role in building resistance against infections. During weather changes, children need 
+          foods rich in Vitamin C, Vitamin D, and zinc, which naturally enhance immunity. Fresh fruits like oranges, guavas, and berries 
+          are excellent choices. Parents should also include green leafy vegetables, whole grains, and protein-rich foods such as lentils, 
+          eggs, and dairy. At  Children’s Hospital, we also recommend parents limit junk food consumption during these months 
+          because it weakens immunity and increases the risk of frequent illnesses.
+        </p>
+      </div>
+      <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Healthy food for kids">
+    </div>
+
+    <!-- Section 3 -->
+    <div class="blog-section">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Doctor with child">
+      <div class="content">
+        <h2>🏥 Common Seasonal Illnesses in Children</h2>
+        <p>
+          The most frequent illnesses reported during weather changes include the common cold, flu, viral fevers, tonsillitis, ear infections, 
+          and respiratory issues like bronchitis. Children with asthma or allergic tendencies are particularly at risk during dusty and humid 
+          weather conditions. Our hospital advises parents to watch out for early symptoms like continuous cough, difficulty breathing, 
+          or prolonged fever and seek medical attention without delay. Early intervention can prevent complications and ensure faster recovery.
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 4 (full-width content continuation) -->
+    <div>
+      <h2>🛡️ Prevention and Parental Care</h2>
+      <p>
+        Prevention is always better than cure. Parents should ensure that children stay hydrated, get adequate rest, and wash their hands 
+        frequently. Proper clothing, especially layering during winter and light cotton clothes in summer, protects them from weather extremes. 
+        Parents should also keep the indoor environment clean and dust-free. Humidifiers during dry winters and mosquito repellents during 
+        monsoons can further safeguard children’s health. Vaccinations also play an important role in preventing diseases like influenza.
+      </p>
+
+      <h2>💡 Expert Advice from  Children’s Hospital</h2>
+      <p>
+        At  Children’s Hospital, our pediatric specialists are committed to providing holistic care. We encourage regular health check-ups 
+        to monitor your child’s growth and immunity levels. Our hospital also runs awareness programs for parents to educate them on handling 
+        seasonal health challenges effectively. Remember, timely medical guidance can make all the difference in protecting your child’s 
+        well-being during unpredictable weather conditions.
+      </p>
+    </div>
+
+    <div class="blog-footer">
+      <p>🌸 Caring for your little ones, every season —  Children’s Hospital</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-evenly">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-heart text-pink me-2"></i>
+                        <span class="brand-text">Children's Hospital</span>
+                    </div>
+                    <p class="footer-description">
+                        Providing exceptional pediatric healthcare with love, care, and expertise. 
+                        Your child's health and happiness are our top priorities.
+                    </p>
+                </div>
+                <!-- <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#departments">Departments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#services">Pediatric Care</a></li>
+                        <li><a href="#services">Vaccinations</a></li>
+                        <li><a href="#services">Dental Care</a></li>
+                        <li><a href="#services">Emergency Care</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-lg-4 mb-4">
+                    <h6 class="footer-title">Contact Info</h6>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>123 Rainbow Street, Healthcare City</p>
+                        <p><i class="fas fa-phone me-2"></i>+1 (555) 123-KIDS</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@rainbowchildrens.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="footer-title">Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright">
+                        &copy; 2025 Hospital name . All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Department Modal -->
+    <div class="modal fade" id="departmentModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="departmentModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="departmentModalBody">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doctor Modal -->
+    <div class="modal fade" id="doctorModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="doctorModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="doctorModalBody">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success/Error Modal -->
+    <div class="modal fade" id="messageModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="messageModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="messageModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
