@@ -2,7 +2,7 @@
 :root {
     --primary-color: #181818;
     --secondary-color: #232946;
-    --accent-mint: #00b894;
+
     --accent-blue: #3a86ff;
     --accent-pink: #ff006e;
     --accent-yellow: #ffd700;
@@ -12,13 +12,33 @@
     --text-light: #b8c1ec;
     --gradient-primary: linear-gradient(135deg, #232946 0%, #3a86ff 100%);
     --gradient-secondary: linear-gradient(135deg, #ff006e 0%, #ffd700 100%);
-    --gradient-mint: linear-gradient(135deg, #00b894 0%, #3a86ff 100%);
+   
     --gradient-min: linear-gradient(135deg, #0296785b 0%, #3274df4d 100%);
     --shadow-light: 0 2px 10px rgba(0,0,0,0.5);
     --shadow-medium: 0 5px 20px rgba(0,0,0,0.7);
     --shadow-heavy: 0 10px 30px rgba(0,0,0,0.9);
     --border-radius: 15px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.btn-gradient {
+    background: linear-gradient(to right, #814bee, #f448bc);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border: none;
+    display: inline-block;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(to right, #f448bc, #814bee); /* reverse on hover */
+    color: #fff;
+    transform: scale(1.05);
 }
 
 /* Global Styles */
@@ -65,10 +85,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-subtitle {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: white;
     max-width: 600px;
     margin: 0 auto;
 }
+
+
 
 /* Animations */
 @keyframes fadeIn {
@@ -137,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation */
 .navbar {
-    background: rgba(44, 62, 80, 0.95);
+    background: #650475;
     backdrop-filter: blur(10px);
     padding: 1rem 0;
     transition: var(--transition);
@@ -148,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Fredoka', cursive;
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--white) !important;
+    color: #650475 !important;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -167,13 +189,13 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .nav-it {
-   background-color: rgb(4 11 56);
+   background-color: #6659f2d4;
    border-radius: 18px;
    
 }
 
 .nav-link {
-    color: var(--white) !important;
+    color: #f8eaf4 !important;
     font-weight: 500;
     margin: 0 0.5rem;
     padding: 0.5rem 1rem !important;
@@ -190,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--gradient-mint);
+    background: #f8eaf4;
     transition: var(--transition);
     transform: translateX(-50%);
 }
@@ -200,8 +222,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 80%;
 }
 
+
+
 .nav-link:hover {
-    color: var(--accent-mint) !important;
+    color: #f8eaf4;
     transform: translateY(-2px);
 }
 
@@ -379,10 +403,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #about{
-   background-color: rgba(179, 187, 245, 0.415);
+   background-color: #f8eaf4; 
 }
 .about-modal-content {
-    background:rgb(4 11 56);
+    background:#660475d4;
     border-radius: var(--border-radius);
     padding: 3rem;
     box-shadow: var(--shadow-medium);
@@ -421,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
-    color: var(--text-light);
+    color: white;
 }
 
 .about-stats {
@@ -438,13 +462,13 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--accent-mint);
+    color: #000000;;
     font-family: 'Fredoka', cursive;
 }
 
 .stat-label {
     font-size: 0.9rem;
-    color: var(--text-light);
+    color: white;
 }
 
 /* Mission & Vision Cards */
@@ -496,7 +520,7 @@ h1, h2, h3, h4, h5, h6 {
 .card-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: #650475;;
 }
 
 .card-text {
@@ -506,14 +530,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Services Section */
 .bg-light {
-    background-color: rgb(4 11 56) !important;
+    background-color: #660475d4 !important;
 }
 
 .service-card {
-    background: rgb(4 11 56);
+    background:#f8eaf4;;
     padding: 2rem;
     border-radius: var(--border-radius);
-     border: 1px solid #00b894;
+     border: 1px solid #ffffff;;
     box-shadow: var(--shadow-light);
     transition: var(--transition);
     text-align: center;
@@ -529,7 +553,7 @@ h1, h2, h3, h4, h5, h6 {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: var(--gradient-mint);
+    background:linear-gradient(to right, #814bee, #f448bc); ;
     opacity: 0;
     transition: var(--transition);
     transform: rotate(45deg);
@@ -541,12 +565,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-card:hover {
     transform: translateY(-10px) rotateX(5deg);
-    box-shadow: var(--shadow-heavy);
+    box-shadow: #f548bb;
 }
 
 .service-icon {
     font-size: 3rem;
-    color: var(--accent-mint);
+     color: #650475;
     margin-bottom: 1.5rem;
     transition: var(--transition);
     position: relative;
@@ -556,19 +580,19 @@ h1, h2, h3, h4, h5, h6 {
 .service-card:hover .service-icon {
     transform: scale(1.2) rotateY(360deg);
     animation: float 2s ease-in-out infinite;
-    color: var(--accent-blue);
+    
 }
 
 .service-title {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.851);
+    color: #650475;
     position: relative;
     z-index: 2;
 }
 
 .service-description {
-    color: var(--text-light);
+    color: #000000; 
     position: relative;
     z-index: 2;
 }
@@ -580,11 +604,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Why Choose Us */
 .why-choose-us {
-    background: rgba(0, 0, 0, 0.316);
+    background: #f8eaf4;;
     padding: 3rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-medium);
-     border: #00b894 solid 1px;
+     border: #ffffff solid 1px;
 
 }
 
@@ -597,7 +621,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
-      background: var(--gradient-min);
+      background:linear-gradient(to right, #814beeb1, #f448bbb7);
        opacity: 1;
 }
 
@@ -635,23 +659,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .why-content h5 {
-    color: rgba(255, 255, 255, 0.849);
+    color: #650475; ;
     margin-bottom: 0.5rem;
 }
 
 .why-content p {
-    color: var(--text-light);
+    color: black;
     margin: 0;
 }
 
 /* Departments Section */
 
 #departments{
-    background-color: rgba(179, 187, 245, 0.415);
+    background-color: #f8eaf4;
     border: #00b894 solid 1px;
 }
 .department-card {
-    background: rgb(4 11 56);
+    background: #660475d4;
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
@@ -689,7 +713,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .department-icon {
     font-size: 3rem;
-    color: var(--accent-blue);
+    color: #f8eaf4;
     margin-bottom: 1.5rem;
     transition: var(--transition);
     position: relative;
@@ -698,7 +722,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .department-card:hover .department-icon {
     transform: scale(1.3) rotateZ(360deg);
-    color: var(--accent-mint);
+    color: white;
 }
 
 .department-title {
@@ -731,7 +755,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Doctors Section */
 
 #doctors {
-    background-color: rgb(4 11 56);
+    background-color: #660475d4;
 }
 .section-tit {
     font-size: 2.5rem;
@@ -740,8 +764,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
+.section-ti{
+     font-size: 2.5rem;
+     color: #650475;
+    font-weight: 700;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
 /* .doctor-card {
-    background-color: rgb(4 11 56);
+    background-color: #660475d4;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
     transition: var(--transition);
@@ -756,14 +788,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .doctor-card {
     display: block; /* important for <a> */
-    background-color: rgb(4 11 56);
+    background-color: #f8eaf4;;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
     transition: var(--transition);
     cursor: pointer;
     overflow: hidden;
     height: auto; /* changed from 100% to auto */
-    border: 1px solid #00b894;
+    border: 1px solid #ffffff;
     box-shadow: 0 0 0 0.2rem rgba(26, 188, 156, 0.25);
     text-decoration: none; /* remove underline */
     color: inherit; /* keep text color */
@@ -793,12 +825,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .doctor-name {
     font-size: 1.3rem;
-    color: rgb(255, 255, 255);
+    color: #650475;;
     margin-bottom: 0.5rem;
 }
 
 .doctor-specialty {
-    color: var(--text-light);
+    color: black;
     margin-bottom: 1rem;
 }
 
@@ -826,36 +858,37 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Forms */
 #contact{
-   border: #00b894 solid 1px;
+   border: #ffffff solid 1px;
 }
 
 #contact.bg-light {
-    background: var(--secondary-color) !important;
+    background:#650475  !important;
 }
 
 #appointment {
-    background-color: rgba(179, 187, 245, 0.415);
-    border: #00b894 solid 1px;
+    background-color: #f8eaf4;
+    border: #ffffff solid 1px;
 }
 
 .section-sub {
     font-size: 1.1rem;
+    font-weight: bold;
     max-width: 600px;
     margin: 0 auto;
-     color: rgb(0, 0, 0);
+     color: #f548bb;;
 }
 
 .section-ti {
     font-size: 2.5rem;
     font-weight: 700;
-    color: rgb(0, 0, 0);
+    color:#650475;
     margin-bottom: 1rem;
 }
 
 
 .appointment-form-container {
     height: 95%;
-    background: rgb(35 41 70);
+    background:linear-gradient(to right, #814beed5, #f448bbcf);
     padding: 3rem;
     border-radius: var(--border-radius);
      box-shadow: var(--shadow-light);
@@ -869,17 +902,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-form-container {
     height: 95%;
-    background: rgba(61, 18, 200, 0.068);
+    background: linear-gradient(to right, #814beed3, #f448bbd6);
     padding: 3rem;
     border-radius: var(--border-radius);
-     border: 1px solid #00b894;
+     border: 1px solid #ffffff;
     box-shadow: 0 0 0 0.2rem rgba(26, 188, 156, 0.25);
     
 }
 
 .form-label {
     font-weight: 600;
-    color: white;
+    color: #ffffff;
     margin-bottom: 0.5rem;
 }
 
@@ -901,8 +934,9 @@ h1, h2, h3, h4, h5, h6 {
 .contact-inf {
     padding: 2rem;
     border-radius: var(--border-radius);
-    border: 1px solid #00b894;
-    box-shadow: 0 0 0 0.2rem rgba(26, 188, 156, 0.25);
+    
+    border: 1px solid #ffffff; 
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
 }
 
 .contact-title {
@@ -916,14 +950,14 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: flex-start;
     margin-bottom: 2rem;
-    background: rgba(26, 188, 156, 0.05);
+    background: linear-gradient(to right, #814bee7e, #f448bb92);
     padding: 0.5rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
 
 .contact-item:hover {
-    background: rgba(26, 188, 156, 0.1);
+    background: linear-gradient(to right, #814beeb6, #f448bbaf);
     transform: translateX(10px);
 }
 
@@ -947,7 +981,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-details p {
-    color: var(--text-light);
+    color: white;
     margin: 0;
 }
 
@@ -984,7 +1018,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: var(--accent-mint);
+    background:#650475;
     color: var(--white);
     border-radius: 50%;
     text-decoration: none;
@@ -992,8 +1026,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-link:hover {
-    background: var(--accent-blue);
-    color: var(--white);
+    background: #f8eaf4; ;
+    color: #650475;
     transform: translateY(-3px) scale(1.1);
 }
 
@@ -1044,7 +1078,7 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-heavy);
-    background-color: rgb(4 11 56);
+    background-color: #660475d4;
 }
 
 .modal-header {
@@ -1320,7 +1354,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .top-header {
-    background: rgb(4 11 56); /* same as navbar color */
+    background: #660475d4; /* same as navbar color */
     color: #fff;
     font-size: 0.85rem; /* smaller text */
     height: 35px; /* thin height */
