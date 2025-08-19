@@ -22,7 +22,7 @@
             background-position: center;
             height: 300px;
             position: relative;
-            margin-top: 56px; /* To account for fixed navbar */
+            margin-top: 60px; /* To account for fixed navbar */
         }
         .header-overlay {
             background: rgba(0, 0, 0, 0.5);
@@ -43,7 +43,20 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+        <!-- Top Header -->
+<div class="top-header d-flex justify-content-between align-items-center px-3">
+    <div class="contact-info d-flex gap-3">
+        <div><i class="fas fa-phone me-1"></i> +1 (555) 123-KIDS</div>
+        <div><i class="fas fa-envelope me-1"></i> info@rainbowchildrens.com</div>
+    </div>
+    <div class="social-icons d-flex gap-2">
+        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</div>
+<!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
@@ -89,76 +102,82 @@
      <section class="about-header-image mt-5">
         <div class="header-overlay text-center d-flex align-items-center justify-content-center">
             <div>
-                <h1 class="text-white display-4">🛎️ Our Services</h1>
+                <h1 class="text-white display-4 mt-5">🛎️ Our Services</h1>
                 <p class="text-white lead">Comprehensive healthcare services designed specifically for children</p>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section-padding bg-light ">
-        <div class="container"> 
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <h5 class="service-title">🧑‍⚕️ Pediatric Care</h5>
-                        <p class="service-description">Comprehensive medical care for infants, children, and adolescents</p>
+  <section id="services" class="section-padding bg-light">
+    <div class="container"> 
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-syringe"></i>
-                        </div>
-                        <h5 class="service-title">💉 Vaccinations</h5>
-                        <p class="service-description">Complete immunization programs to protect your child's health</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-tooth"></i>
-                        </div>
-                        <h5 class="service-title">🦷 Dental Care</h5>
-                        <p class="service-description">Specialized dental services for children in a fun environment</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-heartbeat"></i>
-                        </div>
-                        <h5 class="service-title">🫀 Cardiology</h5>
-                        <p class="service-description">Expert heart care for children with cardiac conditions</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h5 class="service-title">👓 Eye Check-up</h5>
-                        <p class="service-description">Comprehensive eye examinations and vision care</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-ambulance"></i>
-                        </div>
-                        <h5 class="service-title">🩺 Emergency Care</h5>
-                        <p class="service-description">24/7 emergency services for urgent pediatric needs</p>
-                    </div>
+                    <h5 class="service-title">🧑‍⚕️ Pediatric Care</h5>
+                    <p class="service-description">Comprehensive medical care for infants, children, and adolescents</p>
                 </div>
             </div>
-
-          
-            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h5 class="service-title">🚨 Emergency & Critical Care</h5>
+                    <p class="service-description">24/7 urgent treatment for life-threatening illnesses and injuries</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h5 class="service-title">🫀 Pediatric Cardiology</h5>
+                    <p class="service-description">Specialized care for children with heart conditions and defects</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h5 class="service-title">🧠 Pediatric Neurology</h5>
+                    <p class="service-description">Expert diagnosis and management of brain, nerve, and seizure disorders</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                         <i class="fas fa-utensils"></i> 
+                    </div>
+                    <h5 class="service-title">🥗 Pediatric Gastroenterology</h5>
+                    <p class="service-description">Care for digestive, liver, and nutritional disorders in kids</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lungs"></i>
+                    </div>
+                    <h5 class="service-title">🌬️ Pediatric Pulmonology</h5>
+                    <p class="service-description">Management of asthma, lung infections, and breathing difficulties</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                          <i class="fas fa-tint"></i>
+                    </div>
+                    <h5 class="service-title">🩺 Pediatric Nephrology</h5>
+                    <p class="service-description">Care for kidney, urinary tract, and related health conditions</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
@@ -214,8 +233,8 @@
                 <div class="col-lg-4 mb-4">
                     <h6 class="footer-title">Contact Info</h6>
                     <div class="footer-contact">
-                        <p><i class="fas fa-map-marker-alt me-2"></i>123 Rainbow Street, Healthcare City</p>
-                        <p><i class="fas fa-phone me-2"></i>+1 (555) 123-KIDS</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Simhachalam Building, Stadium Rd, Vijaya Nagar, Lanka Veedhi Area, Vizianagaram</p>
+                        <p><i class="fas fa-phone me-2"></i>+19 9959512121</p>
                         <p><i class="fas fa-envelope me-2"></i>info@rainbowchildrens.com</p>
                     </div>
                 </div>
@@ -289,5 +308,9 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+<a href="https://wa.me/9959512121" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
 </body>
 </html>
