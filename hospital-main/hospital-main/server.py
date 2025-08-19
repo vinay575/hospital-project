@@ -26,7 +26,7 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     with socketserver.TCPServer(("0.0.0.0", PORT), MyHTTPRequestHandler) as httpd:
-        print(f"🌈 Children's Hospital website is running!")
+        print(f"🌈 Andhra Children's Hospital website is running!")
         print(f"🏥 Server started at http://0.0.0.0:{PORT}")
         print(f"🌐 Access the website at: https://work-1-xwnwidmtolqeomeh.prod-runtime.all-hands.dev")
         print("✨ Press Ctrl+C to stop the server")

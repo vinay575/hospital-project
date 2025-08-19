@@ -1,6 +1,6 @@
-# 🌈 Children's Hospital Website
+# 🌈 Andhra Children's Hospital Website
 
-A modern, responsive children's hospital website built with HTML, CSS, JavaScript, and Bootstrap. Features beautiful animations, 3D hover effects, and smooth transitions designed to create a welcoming experience for families.
+A modern, responsive Andhra Children's Hospital website built with HTML, CSS, JavaScript, and Bootstrap. Features beautiful animations, 3D hover effects, and smooth transitions designed to create a welcoming experience for families.
 
 ## ✨ Features
 
@@ -154,8 +154,8 @@ project/
 - **Animations**: Adjust timing and effects in CSS
 - **EmailJS**: Configure with your own service credentials
 
-## 🏥 Perfect for Children's Hospitals
-This website template is specifically designed for children's hospitals and pediatric clinics, featuring:
+## 🏥 Perfect for Andhra Children's Hospitals
+This website template is specifically designed for Andhra Children's Hospitals and pediatric clinics, featuring:
 - **Welcoming, non-intimidating design**
 - **Easy appointment booking**
 - **Comprehensive service information**
